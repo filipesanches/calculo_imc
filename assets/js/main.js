@@ -15,12 +15,13 @@ function main() {
     }
 
     const imc = getImc(peso, altura);
-    const classificacaoImc = getClassificaImc(imc);
-    const msg = `Seu IMC é ${imc} (${classificacaoImc})`;
+    //const classificacaoImc = getClassificaImc(imc);
+    //const msg = `Seu IMC é ${imc} (${classificacaoImc})`;
 
-    setResultado(msg, true);
+    setResultado(imc, true);
   });
 
+  /*
   function getClassificaImc(imc) {
     const classificacao = [
       "Abaixo do peso",
@@ -42,6 +43,30 @@ function main() {
   function getImc(peso, altura) {
     const imc = peso / altura ** 2;
     return imc.toFixed(2);
+  }
+  */
+  function getImc(peso, altura) {
+    const imc = (peso / altura ** 2).toFixed(2);
+    function getClassificaImc(imc) {
+      const classificacao = [
+        "Abaixo do peso",
+        "Peso Normal",
+        "Sobrepeso",
+        "Obesidade grau I",
+        "Obesidade grau II",
+        "Obesidade grau III",
+      ];
+  
+      if (imc >= 40) return classificacao[5];
+      if (imc >= 35) return classificacao[4];
+      if (imc >= 30) return classificacao[3];
+      if (imc >= 25) return classificacao[2];
+      if (imc >= 18) return classificacao[1];
+      if (imc < 18) return classificacao[0];
+    }
+    const classificacaoImc = getClassificaImc(imc);
+    const msg = `Seu IMC é ${imc} (${classificacaoImc})`;
+    return msg
   }
 
   function criaP(classe) {
