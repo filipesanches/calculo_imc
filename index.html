@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/jogo-retro.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div class="conteudo">
+      <header>
+        <h1>IMC - RetroLipe</h1>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3">Tabela IMC</th>
+            </tr>
+            <tr>
+              <th>IMC</th>
+              <th>Classificação</th>
+              <th>Obesidade (Grau)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Menor que 18,5</td>
+              <td>Abaixo do peso</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Entre 18,5 e 24,9</td>
+              <td>Peso Normal</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Entre 25,0 e 29,9</td>
+              <td>Sobrepeso</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Entre 30,0 e 34,9</td>
+              <td>Obesidade I</td>
+              <td>I</td>
+            </tr>
+            <tr>
+              <td>Entre 35,0 e 39,9</td>
+              <td>Obesidade II</td>
+              <td>II</td>
+            </tr>
+            <tr>
+              <td>Maior ou igual a 40</td>
+              <td>Obesidade III</td>
+              <td>III</td>
+            </tr>
+          </tbody>
+        </table>
+      </header>
+      <section>
+        <form action="#" method="post" id="formulario">
+          <fieldset>
+            <legend>Calcule seu IMC</legend>
+            <p>
+              <label for="peso">Peso:</label>
+              <input type="text" name="peso" id="peso" />
+            </p>
+            <p>
+              <label for="altura">Altura:</label>
+              <input type="text" name="altura" id="altura" />
+            </p>
+            <p>
+              <button type="submit">Calcular</button>
+            </p>
+          </fieldset>
+        </form>
+        <div id="mensagem"></div>
+      </section>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

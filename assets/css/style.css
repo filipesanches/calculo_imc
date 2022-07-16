@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap");
+:root {
+  --blue-title: rgb(1, 62, 97);
+  --back-color: rgb(225, 247, 247);
+  --selection-color: rgb(187, 243, 253);
+  --info-color: #2196F3;
+  --invalid-color: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+::selection {
+  background-color: var(--selection-color);
+}
+
+body {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo {
+  max-width: 600px;
+  width: 100%;
+  background: var(--back-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 35px rgb(204, 204, 204);
+}
+
+header h1 {
+  color: var(--blue-title);
+}
+
+header p {
+  padding: 20px 0;
+  font-size: 15pt;
+}
+
+header p::first-letter {
+  color: var(--blue-title);
+  font-size: 30pt;
+  padding: 0 5px 0 15px;
+}
+
+header table * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header table {
+  border: 1px solid var(--blue-title);
+  border-radius: 10px;
+  border-spacing: 0;
+  margin: 0;
+  width: 100%;
+  margin: 30px 0;
+  overflow: hidden;
+}
+header table thead tr th {
+  padding: 20px;
+  background-color: rgb(176, 189, 189);
+  color: var(--blue-title);
+}
+header table thead tr:last-child th {
+  padding: 10px;
+  background-color: rgb(214, 228, 228);
+  color: var(--blue-title);
+}
+header table tbody tr:nth-child(even) {
+  background-color: rgb(249, 254, 255);
+}
+header table tbody tr td{
+  padding: 5px;
+  text-align: center;
+}
+form fieldset {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid var(--blue-title);
+}
+
+form fieldset legend {
+  padding: 5px;
+  margin-left: 10px;
+  color: var(--blue-title);
+  font-size: 20pt;
+}
+
+form fieldset p {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: stretch;
+}
+form fieldset p * {
+  font-size: 13pt;
+}
+
+form fieldset p label {
+  border-radius: 10px 0 0 10px;
+  background-color: var(--blue-title);
+  padding: 7px 0 0 15px;
+  color: var(--back-color);
+}
+
+form fieldset p input {
+  padding: 5px;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid transparent;
+  outline: none;
+  transition: border-color 0.5s ease-in;
+}
+
+form fieldset p input:focus {
+  border-color: var(--blue-title);
+}
+
+form fieldset p:last-child {
+  grid-template-columns: 40%;
+  justify-content: end;
+}
+form fieldset p:last-child button {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--blue-title);
+  color: var(--back-color);
+  border: 1px solid var(--blue-title);
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+form fieldset p:last-child button:hover {
+  background-color: var(--back-color);
+  color: var(--blue-title);
+}
+.resultado{
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: var(--back-color);
+  font-size: 15pt;
+}
+.valido{
+  background-color: var(--info-color);
+}
+.invalido{
+  background-color: var(--invalid-color);
+}
